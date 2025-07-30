@@ -1,0 +1,142 @@
+@import "./reset.scss";
+$icons-colors: #c9d2fa, #e2fbe8, #fbe5e6, #e2b53e, #fceed8, #dee9fc, #f1e8fd, #d5faf1;
+$icons-title-colors: #4138c2, #5ec269, #e14f62, #e2b53e, #e87b35, #4e80ee, #9d59ef, #52b3d0;
+.wrapper {
+  min-height: 100vh;
+  min-width: 100%;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.container {
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  &__btn {
+    display: block;
+    margin-right: 0.75rem;
+    padding: 0.75rem 2.25rem;
+    background-color: #c9d2fa;
+    border-radius: 2rem;
+    font-weight: 700;
+    color: #4e80ee;
+  }
+}
+.hero-section {
+  display: flex;
+  padding: 32px 0;
+  &__description {
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    margin: 32px 0;
+  }
+
+  &__btn-row {
+  }
+
+  &__img {
+  }
+}
+.btn-row {
+  &__item {
+  }
+}
+
+.features-section {
+  padding: 4.5rem 0;
+  margin-bottom: 4.5rem;
+  &__title {
+    max-width: 30%;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+  }
+}
+.gallery-box {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  row-gap: 4rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item-icon {
+    display: block;
+    max-width: 4.5rem;
+    max-height: 4.5rem;
+    font-size: 1.875rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+  }
+  &__item-title {
+    margin-bottom: 0.375rem;
+  }
+}
+@for $i from 1 through 8 {
+  .gallery-box__item:nth-child(#{$i}) {
+    .gallery-box__item-icon {
+      background-color: nth($icons-colors, $i);
+    }
+    .gallery-box__item-title {
+      color: nth($icons-title-colors, $i);
+    }
+  }
+}
+.signup-section {
+  padding: 11.75rem 0 10.25rem 0;
+  background-image: url(../img/footer_background_image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__title {
+    max-width: 35%;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    display: block;
+    margin: auto;
+    padding: 0.75rem 2.25rem;
+    background-color: #4138c2;
+    border-radius: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+.footer {
+  display: flex;
+  background-color: #121826;
+  color: #9da3ae;
+  padding: 1.5rem 0;
+  &__copyright {
+    margin-right: 2rem;
+  }
+}
+.links-list {
+  display: flex;
+
+  &__item {
+    font-weight: 700;
+    color: #9da3ae;
+    margin-right: 2rem;
+  }
+}
