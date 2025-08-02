@@ -149,10 +149,9 @@ $icons-title-colors: #4138c2, #5ec269, #e14f62, #e2b53e, #e87b35, #4e80ee, #9d59
 }
 .links-list {
   display: flex;
-
+  color: #e5e7eb;
   &__item {
     font-weight: 700;
-    color: #9da3ae;
     margin-right: 2rem;
   }
 }
