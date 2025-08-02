@@ -9,56 +9,71 @@ $icons-title-colors: #4138c2, #5ec269, #e14f62, #e2b53e, #e87b35, #4e80ee, #9d59
   font-weight: 400;
 }
 .container {
+  padding: 0 4.5rem;
 }
 .header {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   padding: 1.5rem 0;
-  &__btn {
-    display: block;
-    margin-right: 0.75rem;
-    padding: 0.75rem 2.25rem;
+  &__button {
     background-color: #c9d2fa;
-    border-radius: 2rem;
-    font-weight: 700;
     color: #4e80ee;
   }
 }
+.btn {
+  display: block;
+  margin-right: 0.75rem;
+  padding: 0.75rem 2.25rem;
+  border-radius: 2rem;
+  font-weight: 700;
+}
 .hero-section {
   display: flex;
+  align-items: center;
   padding: 32px 0;
   &__description {
+    margin-right: 3rem;
   }
-
   &__title {
     font-size: 2.5rem;
     font-weight: 700;
+    line-height: 3.75rem;
+    span {
+      color: #4138c2;
+    }
   }
-
   &__subtitle {
     margin: 32px 0;
   }
-
-  &__btn-row {
-  }
-
   &__img {
+    max-width: 40%;
   }
 }
 .btn-row {
-  &__item {
+  display: flex;
+  &__create-btn {
+    background-color: #4138c2;
+    color: #ffffff;
+    margin-right: 0.75rem;
+  }
+
+  &__explore-btn {
+    color: #4138c2;
+    border: 2px solid #e5e7eb;
   }
 }
-
 .features-section {
   padding: 4.5rem 0;
   margin-bottom: 4.5rem;
   &__title {
-    max-width: 30%;
+    max-width: 35%;
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin: auto;
+    margin-bottom: 4rem;
   }
 }
 .gallery-box {
@@ -97,7 +112,8 @@ $icons-title-colors: #4138c2, #5ec269, #e14f62, #e2b53e, #e87b35, #4e80ee, #9d59
   }
 }
 .signup-section {
-  padding: 11.75rem 0 10.25rem 0;
+  padding: 11.75rem 4.5rem 10.25rem 4.5rem;
+  margin: 0 -72px;
   background-image: url(../img/footer_background_image.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -121,12 +137,12 @@ $icons-title-colors: #4138c2, #5ec269, #e14f62, #e2b53e, #e87b35, #4e80ee, #9d59
     color: #ffffff;
   }
 }
-
 .footer {
   display: flex;
   background-color: #121826;
   color: #9da3ae;
-  padding: 1.5rem 0;
+  padding: 1.5rem 4.5rem;
+  margin: 0 -4.5rem;
   &__copyright {
     margin-right: 2rem;
   }
